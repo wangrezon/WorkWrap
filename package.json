@@ -1,0 +1,9 @@
+{
+  "name": "workwrap",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev"
+  }
+}

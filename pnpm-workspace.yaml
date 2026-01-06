@@ -1,0 +1,7 @@
+packages:
+  - platform
+  - cli
+
+onlyBuiltDependencies:
+  - sharp
+  - unrs-resolver
