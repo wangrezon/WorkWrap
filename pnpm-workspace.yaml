@@ -1,9 +1,2 @@
 packages:
   - platform
-  - cli
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@swc/core'
-  - sharp
-  - unrs-resolver
