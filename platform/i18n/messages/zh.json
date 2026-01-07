@@ -1,0 +1,47 @@
+{
+  "hello": {
+    "world": "你好，世界！"
+  },
+  "login": {
+    "subtitle": "开发者的 AI 生产力工具",
+    "tagline": "写代码是你的事，写汇报是 AI 的事",
+    "description": "WorkWrap 将 Git 与大语言模型集成，自动生成 Commit Message、工作日报和周报，让你专注于最重要的事情 — 构建优秀的软件。",
+    "welcomeBack": "欢迎回来",
+    "loginPrompt": "登录以继续使用 WorkWrap",
+    "email": "邮箱地址",
+    "emailPlaceholder": "your@email.com",
+    "verificationCode": "验证码",
+    "codePlaceholder": "输入 6 位验证码",
+    "sendCode": "发送验证码",
+    "login": "登录",
+    "or": "或者通过以下方式",
+    "continueWithGitHub": "使用 GitHub 登录",
+    "continueWithGoogle": "使用 Google 登录",
+    "terms": {
+      "prefix": "继续即表示您同意我们的",
+      "service": "服务条款",
+      "and": "和",
+      "privacy": "隐私政策"
+    },
+    "features": {
+      "commit": {
+        "title": "智能 Commit Message",
+        "description": "AI 分析代码变更，即时生成规范且有意义的提交信息。"
+      },
+      "daily": {
+        "title": "工作日报",
+        "description": "从 Git 历史中自动汇总每日工作进度，生成结构化报告。"
+      },
+      "weekly": {
+        "title": "工作周报",
+        "description": "获取全面的周报摘要，突出显示您的成就和贡献。"
+      }
+    },
+    "errors": {
+      "emailRequired": "请输入您的邮箱地址",
+      "emailInvalid": "请输入有效的邮箱地址",
+      "codeRequired": "请输入验证码",
+      "codeInvalid": "验证码必须为 6 位数字"
+    }
+  }
+}

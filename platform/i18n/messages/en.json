@@ -1,0 +1,47 @@
+{
+  "hello": {
+    "world": "Hello, world!"
+  },
+  "login": {
+    "subtitle": "AI-powered productivity for developers",
+    "tagline": "Code is your job, reporting is AI's job",
+    "description": "WorkWrap integrates Git with LLMs to automatically generate commit messages, daily reports, and weekly summaries, so you can focus on what matters most — building great software.",
+    "welcomeBack": "Welcome Back",
+    "loginPrompt": "Sign in to continue to WorkWrap",
+    "email": "Email Address",
+    "emailPlaceholder": "you@example.com",
+    "verificationCode": "Verification Code",
+    "codePlaceholder": "Enter 6-digit code",
+    "sendCode": "Send Code",
+    "login": "Sign In",
+    "or": "or continue with",
+    "continueWithGitHub": "Continue with GitHub",
+    "continueWithGoogle": "Continue with Google",
+    "terms": {
+      "prefix": "By continuing, you agree to our",
+      "service": "Terms of Service",
+      "and": "and",
+      "privacy": "Privacy Policy"
+    },
+    "features": {
+      "commit": {
+        "title": "Smart Commit Messages",
+        "description": "AI analyzes your code changes and generates standardized, meaningful commit messages instantly."
+      },
+      "daily": {
+        "title": "Daily Reports",
+        "description": "Automatically compile your daily work progress from Git history into structured reports."
+      },
+      "weekly": {
+        "title": "Weekly Summaries",
+        "description": "Get comprehensive weekly summaries highlighting your achievements and contributions."
+      }
+    },
+    "errors": {
+      "emailRequired": "Please enter your email address",
+      "emailInvalid": "Please enter a valid email address",
+      "codeRequired": "Please enter the verification code",
+      "codeInvalid": "Verification code must be 6 digits"
+    }
+  }
+}
