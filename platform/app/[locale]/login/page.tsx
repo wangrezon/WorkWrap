@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { GitCommit, FileText, Calendar } from "lucide-react";
-import { LoginForm } from "./components/login-form";
-import { OAuthButtons } from "./components/oauth-buttons";
+import { LoginForm } from "./components/LoginForm";
+import { OAuthButtons } from "./components/OAuthButtons";
 
 function FeatureItem({
   icon: Icon,
