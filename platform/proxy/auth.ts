@@ -14,10 +14,7 @@ export function createAuthMiddleware(): MiddlewareFn {
       pathname.includes(path)
     );
 
-    const isAuthRoute =
-      pathname.includes("/login") || pathname.includes("/api/auth");
-
-    if (isProtectedPath && !session && !isAuthRoute) {
+    if (isProtectedPath && !session) {
       const loginUrl = new URL("/login", request.url);
       loginUrl.searchParams.set("callbackUrl", pathname);
       return NextResponse.redirect(loginUrl);

@@ -65,6 +65,9 @@ export async function createVerificationCode(
   pool: Pool,
   email: string
 ): Promise<{ success: boolean; error?: string; code?: string }> {
+  // 清理过期的验证码记录
+  await cleanupExpiredCodes(pool);
+
   // 检查是否被锁定
   const lockCheck = await checkLocked(pool, email);
   if (lockCheck.locked) {
@@ -183,7 +186,7 @@ export async function verifyCode(
 /**
  * 清理过期的验证码记录
  */
-export async function cleanupExpiredCodes(pool: Pool): Promise<void> {
+async function cleanupExpiredCodes(pool: Pool): Promise<void> {
   await pool.query(
     `DELETE FROM email_verification_codes WHERE "expiresAt" < NOW()`
   );

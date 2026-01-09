@@ -4,11 +4,15 @@
 "use server";
 
 import { signIn } from "@/auth";
-import { createPool } from "@/lib/db/pool";
+import { createPool } from "@/lib/repositories/pool";
 import {
   createVerificationCode,
   verifyCode as verifyCodeInDb,
-} from "@/lib/db/verification";
+} from "@/lib/repositories/verification";
+import {
+  isEmailUsedByOtherUser,
+  updateUserEmail,
+} from "@/lib/repositories/users";
 import { sendVerificationCodeEmail } from "@/lib/email/resend";
 import {
   sendCodeSchema,
@@ -193,12 +197,13 @@ export async function bindEmail(
 
     try {
       // 检查邮箱是否已被其他用户使用
-      const emailCheck = await pool.query<{ id: number }>(
-        `SELECT id FROM users WHERE email = $1 AND id != $2`,
-        [email, parseInt(userId)]
+      const emailUsed = await isEmailUsedByOtherUser(
+        pool,
+        email,
+        parseInt(userId)
       );
 
-      if (emailCheck.rows.length > 0) {
+      if (emailUsed) {
         return {
           success: false,
           error: {
@@ -219,10 +224,7 @@ export async function bindEmail(
       }
 
       // 更新用户邮箱
-      await pool.query(
-        `UPDATE users SET email = $1, "emailVerified" = NOW() WHERE id = $2`,
-        [email, parseInt(userId)]
-      );
+      await updateUserEmail(pool, parseInt(userId), email);
 
       return {
         success: true,
