@@ -16,7 +16,6 @@
     "login": "登录",
     "or": "或者通过以下方式",
     "continueWithGitHub": "使用 GitHub 登录",
-    "continueWithGoogle": "使用 Google 登录",
     "terms": {
       "prefix": "继续即表示您同意我们的",
       "service": "服务条款",
@@ -41,7 +40,17 @@
       "emailRequired": "请输入您的邮箱地址",
       "emailInvalid": "请输入有效的邮箱地址",
       "codeRequired": "请输入验证码",
-      "codeInvalid": "验证码必须为 6 位数字"
-    }
+      "codeInvalid": "验证码必须为 6 位数字",
+      "codeExpired": "验证码已过期，请重新获取",
+      "accountLocked": "账户已被锁定，请稍后再试",
+      "sendTooFrequent": "发送过于频繁，请稍后再试",
+      "tooManyAttempts": "错误次数过多，账户已被锁定",
+      "sendCodeFailed": "发送验证码失败，请稍后再试",
+      "verifyCodeFailed": "验证失败，请检查验证码",
+      "loginFailed": "登录失败，请稍后再试",
+      "emailSendFailed": "邮件发送失败，请稍后再试",
+      "bindEmailFailed": "绑定邮箱失败，请稍后再试"
+    },
+    "codeSent": "验证码已发送，请查收邮件"
   }
 }

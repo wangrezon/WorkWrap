@@ -5,9 +5,13 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { sendVerificationCode, verifyCode } from "@/lib/actions/auth";
+import { sendVerificationCode, bindEmail } from "@/lib/actions/auth";
 
-export function LoginForm() {
+interface BindEmailFormProps {
+  userId?: string;
+}
+
+export function BindEmailForm({ userId }: BindEmailFormProps) {
   const t = useTranslations("login");
   const router = useRouter();
   const [email, setEmail] = React.useState("");
@@ -96,19 +100,19 @@ export function LoginForm() {
     formData.append("email", email);
     formData.append("code", code);
 
-    const result = await verifyCode(formData);
+    const result = await bindEmail(formData, userId);
 
     setIsLoading(false);
 
     if (result.success) {
-      // 登录成功，重定向到首页或个人中心
+      // 绑定成功，重定向到首页
       router.push("/");
       router.refresh();
     } else {
       setErrors({
         code: result.error?.message
           ? t(result.error.message)
-          : t("errors.verifyCodeFailed"),
+          : t("errors.bindEmailFailed"),
       });
     }
   };
@@ -166,7 +170,7 @@ export function LoginForm() {
         size="lg"
         isLoading={isLoading}
       >
-        {t("login")}
+        绑定邮箱
       </Button>
     </form>
   );
