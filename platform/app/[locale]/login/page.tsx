@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { GitCommit, FileText, Calendar } from "lucide-react";
 import { LoginForm } from "./components/LoginForm";
 import { OAuthButtons } from "./components/OAuthButtons";
+import { IntlToggle } from "@/components/IntlToggle";
 
 function FeatureItem({
   icon: Icon,
@@ -32,6 +33,11 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex bg-slate-900">
+      {/* Language Toggle - Floating */}
+      <div className="fixed top-4 right-4 z-50">
+        <IntlToggle />
+      </div>
+
       {/* Left side - Branding */}
       <div className="w-1/2 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 p-12 flex flex-col justify-center relative overflow-hidden">
         {/* Background decoration */}
@@ -52,13 +58,15 @@ export default function LoginPage() {
         <div className="relative z-10 max-w-lg mx-auto">
           {/* Logo and Brand */}
           <div className="flex items-center gap-4 mb-8">
-            <Image
-              src="/avatar.webp"
-              alt="WorkWrap Logo"
-              width={64}
-              height={64}
-              className="rounded-2xl shadow-lg shadow-black/20"
-            />
+            <div className="rounded-2xl bg-linear-to-br from-sky-500/20 via-indigo-500/20 to-purple-500/20 p-2 shadow-lg shadow-black/20">
+              <Image
+                src="/workwrap.webp"
+                alt="WorkWrap Logo"
+                width={64}
+                height={64}
+                className="rounded-xl"
+              />
+            </div>
             <div>
               <h1 className="text-3xl font-bold text-slate-50 font-heading">
                 WorkWrap
@@ -69,10 +77,9 @@ export default function LoginPage() {
 
           {/* Tagline */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-slate-50 mb-3 leading-tight">
+            <h2 className="text-2xl font-semibold text-slate-50 leading-tight">
               {t("tagline")}
             </h2>
-            <p className="text-slate-400 leading-relaxed">{t("description")}</p>
           </div>
 
           {/* Features */}

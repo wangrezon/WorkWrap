@@ -1,11 +1,11 @@
 {
-  "hello": {
-    "world": "你好，世界！"
+  "metadata": {
+    "title": "WorkWrap - 总结汇报工具",
+    "description": "专注工作，让 AI 处理汇报。WorkWrap 自动汇总您的工作内容，生成专业的工作日报和周报，让您从繁琐的汇报工作中解放出来。"
   },
   "login": {
-    "subtitle": "开发者的 AI 生产力工具",
-    "tagline": "写代码是你的事，写汇报是 AI 的事",
-    "description": "WorkWrap 将 Git 与大语言模型集成，自动生成 Commit Message、工作日报和周报，让你专注于最重要的事情 — 构建优秀的软件。",
+    "subtitle": "总结汇报工具",
+    "tagline": "专注工作本身，汇报交给 AI",
     "welcomeBack": "欢迎回来",
     "loginPrompt": "登录以继续使用 WorkWrap",
     "email": "邮箱地址",
@@ -25,16 +25,16 @@
     },
     "features": {
       "commit": {
-        "title": "智能 Commit Message",
-        "description": "AI 分析代码变更，即时生成规范且有意义的提交信息。"
+        "title": "智能工作总结",
+        "description": "AI 自动分析您的工作内容，生成清晰、专业的工作总结。"
       },
       "daily": {
         "title": "工作日报",
-        "description": "从 Git 历史中自动汇总每日工作进度，生成结构化报告。"
+        "description": "自动汇总每日工作内容，生成结构化的日报，让汇报变得简单高效。"
       },
       "weekly": {
         "title": "工作周报",
-        "description": "获取全面的周报摘要，突出显示您的成就和贡献。"
+        "description": "全面梳理一周工作成果，生成专业的周报摘要，突出您的贡献与成就。"
       }
     },
     "errors": {

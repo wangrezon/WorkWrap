@@ -1,11 +1,11 @@
 {
-  "hello": {
-    "world": "Hello, world!"
+  "metadata": {
+    "title": "WorkWrap - Summary & Reporting Tool",
+    "description": "Focus on your work, let AI handle reporting. WorkWrap automatically summarizes your work and generates professional daily and weekly reports, freeing you from tedious reporting tasks."
   },
   "login": {
-    "subtitle": "AI-powered productivity for developers",
-    "tagline": "Code is your job, reporting is AI's job",
-    "description": "WorkWrap integrates Git with LLMs to automatically generate commit messages, daily reports, and weekly summaries, so you can focus on what matters most — building great software.",
+    "subtitle": "Summary & Reporting Tool",
+    "tagline": "Focus on work, let AI handle reporting",
     "welcomeBack": "Welcome Back",
     "loginPrompt": "Sign in to continue to WorkWrap",
     "email": "Email Address",
@@ -25,16 +25,16 @@
     },
     "features": {
       "commit": {
-        "title": "Smart Commit Messages",
-        "description": "AI analyzes your code changes and generates standardized, meaningful commit messages instantly."
+        "title": "Smart Work Summary",
+        "description": "AI automatically analyzes your work and generates clear, professional summaries."
       },
       "daily": {
         "title": "Daily Reports",
-        "description": "Automatically compile your daily work progress from Git history into structured reports."
+        "description": "Automatically compile your daily work into structured reports, making reporting simple and efficient."
       },
       "weekly": {
-        "title": "Weekly Summaries",
-        "description": "Get comprehensive weekly summaries highlighting your achievements and contributions."
+        "title": "Weekly Reports",
+        "description": "Comprehensive weekly summaries that highlight your achievements and contributions professionally."
       }
     },
     "errors": {

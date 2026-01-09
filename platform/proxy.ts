@@ -3,7 +3,7 @@ import {
   chainMiddlewares,
   createAuthMiddleware,
   createI18nMiddleware,
-} from "./middleware";
+} from "./proxy/middleware";
 
 export default async function proxy(req: NextRequest) {
   const middlewareChain = chainMiddlewares(

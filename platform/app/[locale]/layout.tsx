@@ -1,10 +1,10 @@
 import "./globals.css";
 
 import { Analytics } from "@vercel/analytics/next";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono, Fredoka, Nunito } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import type { Locale } from "@/types/intl";
@@ -29,16 +29,24 @@ const nunito = Nunito({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "WorkWrap - AI-powered productivity for developers",
-  description:
-    "Keep coding, let AI handle reporting. WorkWrap integrates Git with LLMs to generate commit messages, daily reports, and weekly summaries so you stay focused on building.",
-  icons: {
-    icon: "/avatar.ico",
-    shortcut: "/avatar.ico",
-    apple: "/avatar.webp",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    icons: {
+      icon: "/workwrap.ico",
+      shortcut: "/workwrap.ico",
+      apple: "/workwrap.webp",
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
