@@ -13,7 +13,7 @@ import {
 
 // 注意：Pool 必须在请求处理器内部创建
 // 这里我们导出一个函数来创建配置
-export const { handlers, signIn, signOut, auth } = NextAuth((req) => {
+export const { handlers, signIn, signOut, auth } = NextAuth(() => {
   // 在请求处理器内部创建 Pool
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
